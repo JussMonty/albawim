@@ -48,5 +48,5 @@ ul{
 
 /*question 5*/
 a:hover{
-    text-decoration: green;
+    color: green;
 }
