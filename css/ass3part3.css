@@ -1,0 +1,126 @@
+/* General setup */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0 auto;
+    min-width: 1000px;
+    max-width: 1400px;
+  }
+  
+  /* Layout */
+  
+  section {
+    float: left;
+    width: 50%;
+  }
+  
+  aside {
+    float: left;
+    width: 30%;
+  }
+  
+  nav {
+    float: left;
+    width: 20%;
+  }
+  
+  footer {
+    clear: both;
+  }
+  
+  header, section, aside, nav, footer {
+    padding: 20px;
+  }
+  
+  /* header and footer */
+  
+  header, footer {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+  }
+  
+  /* WRITE YOUR CODE BELOW HERE */
+
+  p, ul, ol {
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  h2 {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+body {
+  font-size: 10px;
+}
+
+body {
+  line-height: 150%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+p, ul, ol {
+  font-size: 1rem;
+}
+
+body {
+  letter-spacing: 1px;
+}
+
+p {
+  text-indent: 20px;
+}
+
+a:link {
+  color: #a66;
+}
+
+a:visited {
+  color: rgb(180, 150, 150);
+}
+
+a:focus {
+  color: rgb(180, 70, 70);
+}
+
+a:hover {
+  color: rgb(130, 69, 69);
+  text-decoration: none;
+}
+
+a {
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: none;
+}
+
+a[href^="https//"]::after {
+  content: url(/ass3/external-link-52.png);
+}
+
+nav{
+  padding: 20px;
+  width: 20px;
+  height: 5px;
+  margin-top: 10px;
+  margin-left: 45px;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  border-radius: 20px;
+  border: 1px solid #a66;
+}
