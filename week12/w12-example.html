@@ -3,10 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function validate(){
+            document.querySelector('#fname-error').style.color="red";
+            let fname = document.querySelector('#fname').value.trim();
+            // Validate first name
+            if(fname.length==0){
+                //alert("You must enter a value for first name");
+                document.querySelector('#fname-error').textContent = "You must enter a value for first name";
+                return false;
+            }
+            else if(fname.length<5){
+                document.querySelector('#fname-error').textContent = "The name must be at least 5 characters";
+                return false;
+            }
+
+            return false
+        }
+    </script>
     <title>Document</title>
 </head>
 <body>
     <h1>Week 12: Introduction to Forms</h1>
-    <form action="#" method="">
+    <form action="#" method="get" onsubmit="return validate();">
+        <div>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" title="First Name" placeholder="First Name">
+            <span id="fname-error"></span>
+        </div>
+        <div>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" title="Last Name" placeholder="Last Name">
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" title="Password" placeholder="Password">
+        </div>
+        <div>
+            <label for="Assignment">Upload your Assignment:</label>
+            <input type="file" id="Assignment">
+        </div>
+        <div>
+            <p>What are your hobbies and interests?</p>
+            <!--checked makes the checkbox checked by default-->
+            <input type="checkbox" id="interest1" name="interest" value="sports" checked>
+            <label for="interest1">Sports</label>
+            <input type="checkbox" id="interest2" name="interest" value="music">
+            <label for="interest2">Music</label>
+        </div>
+        <div>
+            <p>Which OS do you prefer?</p>
+            <!--checked makes the checkbox checked by default-->
+            <input type="radio" id="OS1" name="OS" value="Windows" checked>
+            <label for="OS1">Windows</label>
+            <input type="radio" id="OS2" name="OS" value="Mac">
+            <label for="OS2">Mac</label>
+        </div>
+        <div><br>
+            <label for="">What is your current course?</label>
+            <input type="text" id="course" name="course" list="list1">
+            <datalist id="list1">
+                <option>INFT1206</option>
+                <!--You don't have to put in a value if you want it to look cleaner.
+                You can use the text if you want to submit-->
+                <option value="inft2100">INFT2100</option>
+            </datalist>
+        </div>
+        <div><br>
+            <label for="">What do you want to do this weekend?</label>
+            <!--You can put a size tag to control how many options you want to show-->
+            <select name="weekend" id="weekend">
+                <option value="coffee">Drink Coffee</option>
+                <option value="book">Read a Book</option>
+                <!--If you don't have a value it will just take the text-->
+                <option>Take a walk</option>
+        </div>
+
+        <input type="hidden" name="secret" value="Hello">
+
+        <div><br>
+            <label for="">What do you think about this course so far?</label><br>
+            <textarea name="" id="" rows="6" cols="35">
+
+            </textarea>
+        </div>
+        <div>
+            <input type="submit" value="GO">
+            <input type="reset">
+            <input type="button" value="Calculate">
+        </div>
+        <div><br>
+            <input type="submit" value="GO">
+        </div>
 </body>
 </html>
