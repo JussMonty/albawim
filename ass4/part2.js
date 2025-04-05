@@ -11,13 +11,13 @@ const imageFilenames = ['pic1.jpg', 'pic2.jpg', 'pic3.jpg', 'pic4.jpg', 'pic5.jp
 const altText = {
     'pic1.jpg': 'Closeup of a human eye',
     'pic2.jpg': 'Rock that looks like a wave',
-    'pic3.jpg': 'Pirple and white flowers',
+    'pic3.jpg': 'Purple and white flowers',
     'pic4.jpg': 'Wall from ancient Egypt',
     'pic5.jpg': 'Big moth on a leaf'
 };
 
 /* Looping through images */
-for(let i = 0; imageFilenames.length; i++){
+for(let i = 0; i < imageFilenames.length; i++){
     const filename = imageFilenames[i];
 
     const newImage = document.createElement('img');
@@ -39,7 +39,7 @@ btn.addEventListener('click', function(){
     if (currentClass === 'dark'){
         btn.setAttribute('class', 'light');
         btn.textContent =  'Lighten';
-        overlay.style,backgroundColor = 'rgb(0 0 0 / 50%)';
+        overlay.style.backgroundColor = 'rgb(0 0 0 / 50%)';
     } else {
         btn.setAttribute('class', 'dark');
         btn.textContent = 'Darken';
